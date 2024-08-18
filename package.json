@@ -1,0 +1,46 @@
+{
+  "name": "bb-reply-chrome-extension",
+  "version": "0.1.4",
+  "buildTime": "2024-08-09",
+  "source": "src/index.html",
+  "description": "bb-reply-chrome-extension",
+  "dependencies": {
+    "clsx": "^1.2.1",
+    "dayjs": "^1.11.7",
+    "html-to-image": "^1.11.11",
+    "mobx": "^6.12.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-draggable": "^4.4.6",
+    "react-select": "^5.7.7"
+  },
+  "devDependencies": {
+    "@parcel/transformer-less": "^2.9.3",
+    "@types/node": "^20.6.5",
+    "@types/react": "18.0",
+    "@types/react-dom": "18.0",
+    "chrome-types": "^0.1.231",
+    "html2canvas": "^1.4.1",
+    "parcel": "^2.8.3",
+    "postcss": "^8.4.30",
+    "postcss-modules": "^4.3.1",
+    "process": "^0.11.10"
+  },
+  "scripts": {
+    "start": "parcel src/index.tsx src/popup.html  --no-cache",
+    "start:bg": "parcel build src/background.ts --no-cache",
+    "build": "rm -rf dist/; parcel build src/background.ts src/script.ts src/index.tsx src/popup.html --no-content-hash --no-cache;sh deploy.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DearDawn/bb-reply.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DearDawn/bb-reply/issues"
+  },
+  "homepage": "https://github.com/DearDawn/bb-reply"
+}
